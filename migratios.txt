@@ -1,0 +1,5 @@
+migrate -path ./migrations  -database "postgres://postgres:Aucaauca1@localhost/backend-go?sslmode=disable" up
+
+#create migrations
+migrate create -seq -ext .sql -dir ./migrations create_movies_table
+migrate create -seq -ext .sql -dir ./migrations add_movies_check_constraints
